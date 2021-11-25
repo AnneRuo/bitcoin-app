@@ -5,9 +5,9 @@ import {
     Routes,
     BrowserRouter as Router,
   } from "react-router-dom";
-  import Home from "./Home";
-  import Stats from "./Stats";
-  import Contact from "./Contact";
+  import Home from "./components/Home";
+  import Stats from "./components/Stats";
+  import Contact from "./components/Contact";
   
 
 const App = () => {
