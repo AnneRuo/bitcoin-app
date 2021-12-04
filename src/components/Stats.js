@@ -12,6 +12,9 @@ const Stats = () => {
         <div id="form">
           <Form />
         </div>
+        <div id="data">
+          <Getdata />
+        </div>
 
       </div>
     );

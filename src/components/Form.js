@@ -20,8 +20,11 @@ class Form extends React.Component {
     }
 
     handleSubmit(event) {
-        console.log('Date range ' + this.state.startdate + ' - ' + this.state.enddate);
         event.preventDefault();
+        console.log('Date range ' + this.state.startdate + ' - ' + this.state.enddate);
+        let timestampStart = (new Date(this.state.startdate).getTime())/1000;
+        let timestampEnd = (new Date(this.state.enddate).getTime() + (1*60*60*1000))/1000;
+        Getdata(timestampStart, timestampEnd);
     }    
   
     render() {
@@ -38,7 +41,7 @@ class Form extends React.Component {
                 </label>
                 <input type="submit" id="submitBtn" value="Show statistics" />
             </form>
-            <Getdata startdate={this.state.startdate} enddate={this.state.enddate} />
+            {/* <Getdata startdate={this.state.startdate} enddate={this.state.enddate} /> */}
         </div>
       );
     }
