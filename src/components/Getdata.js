@@ -5,40 +5,35 @@ import HighestVolume from "./HighestVolume";
 import BestDay from "./BestDay";
 
 
-const fetchData = (timestampStart, timestampEnd) => {
-    return axios.get(
-        `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=eur&from=${timestampStart}&to=${timestampEnd}`)
-        .then((response) => console.log(response.data));
-}
+//'https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=eur&from=1577836800&to=1609376400'
+//`https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=eur&from=${timestampStart}&to=${timestampEnd}`
 
+function Getdata(timestampStart, timestampEnd) {
+    const [data, setData] = useState([])
 
-const Getdata = ({timestampStart, timestampEnd}) => {
+    useEffect(() => {
+        console.log('effect')
+        axios
+          .get(`https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=eur&from=${timestampStart}&to=${timestampEnd}`)
+          .then(response => {
+            console.log('promise fulfilled')
+            setData(response.data)
+          })
+      }, [])
+      console.log('render', data.length)
+      console.log(JSON.stringify(data))
 
     
-    //Timestamp to date: new Date(1636701329000).toLocaleString();   
-  
-
-/*     useEffect(() => {
-        const getData = async () => {
-            try {
-                const response = await axios.get(`https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=eur&from=${timestampStart}&to=${timestampEnd}`)
-                setData(response.data);
-            } catch (error) {
-                console.log(error);
-            }
-        };
-        getData();
-    }, []);
-    console.log(data); */
-    
-    return (
+      return (
         <div>
+
             <LongestDownward />
             <HighestVolume />
             <BestDay />
             
         </div>
     )
+
 }
 
 export default Getdata;

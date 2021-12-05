@@ -25,6 +25,7 @@ class Form extends React.Component {
         let timestampStart = (new Date(this.state.startdate).getTime())/1000;
         let timestampEnd = (new Date(this.state.enddate).getTime() + (1*60*60*1000))/1000;
         Getdata(timestampStart, timestampEnd);
+        //timestampStart, timestampEnd
     }    
   
     render() {
