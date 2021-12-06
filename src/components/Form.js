@@ -1,51 +1,36 @@
-import React from "react";
-import Getdata from "./Getdata";
+import React, { useState } from "react";
+import { Getdata } from "./Getdata";
 
-class Form extends React.Component {
-    constructor(props) {
-      super(props);
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
-      this.state = {startdate: "",
-            enddate: ""
-        };
-    }
-  
-    handleChange(event) {
-        const value = event.target.value;
+const Form = ({setData}) => {
+    const [fromDate, setFromDate] = useState();
+    const [toDate, setToDate] = useState();
+    
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        this.setState(
-            {...this.state, [event.target.name]: value },
-            );
-    }
-
-    handleSubmit(event) {
-        event.preventDefault();
-        console.log('Date range ' + this.state.startdate + ' - ' + this.state.enddate);
-        let timestampStart = (new Date(this.state.startdate).getTime())/1000;
-        let timestampEnd = (new Date(this.state.enddate).getTime() + (1*60*60*1000))/1000;
-        Getdata(timestampStart, timestampEnd);
-        //timestampStart, timestampEnd
+        console.log('Date range ' + fromDate + ' - ' + toDate);
+        let timestampStart = (new Date(fromDate).getTime())/1000;
+        let timestampEnd = (new Date(toDate).getTime() + (1*60*60*1000))/1000;
+        
+        const fetchData = await Getdata(timestampStart, timestampEnd);
+        setData(fetchData);
     }    
-  
-    render() {
-      return (
+
+    return (
         <div className="form-box">
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <label>
                     Start date:
-                    <input type="date" min='1970-01-01' name="startdate" value={this.state.startdate} onChange={this.handleChange}/>
+                    <input type="date" name="fromdate" value={fromDate} onChange={(e) => setFromDate(e.target.value)} />
                 </label>
                 <label>
                     End date:
-                    <input type="date" min='1970-01-01' name="enddate" value={this.state.enddate} onChange={this.handleChange}/>
+                    <input type="date" name="todate" value={toDate} onChange={(e) => setToDate(e.target.value)} />
                 </label>
-                <input type="submit" id="submitBtn" value="Show statistics" />
+                <button type="submit" id="submitBtn">Show statistics</button>
             </form>
-            {/* <Getdata startdate={this.state.startdate} enddate={this.state.enddate} /> */}
         </div>
-      );
-    }
+    );
 }
+
 
 export default Form;

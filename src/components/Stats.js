@@ -1,23 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import Form from "./Form";
-import Getdata from "./Getdata";
+import LongestDownward from "./LongestDownward";
+import HighestVolume from "./HighestVolume";
+import BestDay from "./BestDay";
 
  
 const Stats = () => {
-    return (
-      <div>
-        <h2>Bitcoin's statistics</h2>
-        <h4>Select date range:</h4>
 
-        <div id="form">
-          <Form />
-        </div>
-        <div id="data">
-          <Getdata />
-        </div>
+  const [data, setData] = useState({});
+  console.log(data);
 
+  return (
+    <div>
+      <h2>Bitcoin's statistics</h2>
+      <h4>Select date range:</h4>
+
+      <div id="form">
+        <Form setData={setData} />
       </div>
-    );
-  }
+      <div id="data">
+        <LongestDownward data={data} />
+        <HighestVolume data={data} />
+        <BestDay data={data} />
+      </div>
+
+    </div>
+  );
+}
  
 export default Stats;
