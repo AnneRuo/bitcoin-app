@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Getdata } from "./Getdata";
 
 const Form = ({setData}) => {
-    const [fromDate, setFromDate] = useState();
-    const [toDate, setToDate] = useState();
+    const [fromDate, setFromDate] = useState("2020-01-01");
+    const [toDate, setToDate] = useState("2020-12-31");
     
     const handleSubmit = async (event) => {
         event.preventDefault();
