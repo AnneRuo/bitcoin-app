@@ -25,7 +25,7 @@ const HighestVolume = ({data}) => {
     return (
         <div>
             <h4>The highest trading volume within the given date range:</h4>
-            <p>Highest volume {highestVolTimestamp} was on {highestDay} </p>
+            <p>Highest volume {highestVol} was on {highestDay} </p>
         </div>
       );
 
