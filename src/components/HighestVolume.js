@@ -3,7 +3,7 @@ import React from "react";
 const HighestVolume = ({data}) => {
 
     let volumes = data.total_volumes;
-    console.log(volumes);
+    //console.log(volumes);
     //console.table(volumes);
     //console.log(volumes[0][1]);
     
@@ -21,7 +21,6 @@ const HighestVolume = ({data}) => {
     //Timestamp to date: new Date(1636701329000).toLocaleString();
     const highestDay = new Date(highestVolTimestamp).toLocaleString();
     
-
     return (
         <div>
             <h4>The highest trading volume within the given date range:</h4>
