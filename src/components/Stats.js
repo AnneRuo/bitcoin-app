@@ -19,9 +19,9 @@ const Stats = () => {
         <Form setData={setData} />
       </div>
       <div id="data">
-        <LongestDownward data={data} />
-        <HighestVolume data={data} />
-        <BestDay data={data} />
+        {(data.prices.length > 0) ? <LongestDownward data={data} /> : <p/>}
+        {(data.total_volumes.length > 0) ? <HighestVolume data={data} /> : <p/>}
+        {(data.prices.length > 0) ? <BestDay data={data} /> : <p/>}        
       </div>
 
     </div>
