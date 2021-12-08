@@ -8,7 +8,7 @@ const HighestVolume = ({data}) => {
     //console.log(volumes[0][1]);
     
     let highestVol = volumes.reduce(function (a, b) {
-        return Math.max(b[1]);
+        return Math.max(a, b[1]);
     }, 0);
     
     let highestVolTimestamp;
