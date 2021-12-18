@@ -3,7 +3,7 @@ body {
     padding: 20px;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   h1, h2, h3, ul, li, form, #submitBtn {
@@ -68,7 +68,7 @@ body {
   .form-box label {
     display: inline-block;
     text-align: left;
-    font-size: 18px;
+    font-size: 16px;
     margin: 0 0 2vh 0;
   }
 
@@ -90,7 +90,7 @@ body {
     padding-left: 15px;
     padding-right: 15px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
     color: #004561;
     font-weight: bold;
     border-radius: 7px;

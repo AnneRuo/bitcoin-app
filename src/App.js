@@ -20,13 +20,13 @@ const App = () => {
                     <h1>itcoin App</h1>
                 </div>
                 <ul className="header">
-                    <li><NavLink to="/home">Home</NavLink></li>
+                    <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="/stats">Statistics</NavLink></li>
                     <li><NavLink to="/contact">Contact</NavLink></li>
                 </ul>
                 <div className="content">
                   <Routes>
-                      <Route exact path="/home" element={<Home />}/>
+                      <Route exact path="/" element={<Home />}/>
                       <Route path="/stats" element={<Stats />}/>
                       <Route path="/contact" element={<Contact />}/>
                   </Routes>
