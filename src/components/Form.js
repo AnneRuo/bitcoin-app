@@ -33,7 +33,6 @@ const Form = ({setData}) => {
         } */
 
         setData(fetchData);
-        
     }    
 
     return (
@@ -52,6 +51,5 @@ const Form = ({setData}) => {
         </div>
     );
 }
-
 
 export default Form;

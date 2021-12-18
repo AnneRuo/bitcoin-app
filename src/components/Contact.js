@@ -16,7 +16,8 @@ const Contact = () => {
           continue learning on the job.</p>
         
         <p>You can find my other projects on <a href="https://github.com/AnneRuo?tab=repositories">
-          GitHub</a> and get to know me and my skills better on my <a href="https://anneruo.github.io/">GitHub page</a>.</p>
+          GitHub</a> and get to know me and my skills better on my <a href="https://anneruo.github.io/">
+          GitHub page</a>.</p>
 
         <h4>Let's help Scrooge McDuck together in the future!</h4> 
       </div>

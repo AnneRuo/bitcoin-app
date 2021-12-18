@@ -8,7 +8,6 @@ import BestDay from "./BestDay";
 const Stats = () => {
 
   const [data, setData] = useState({prices: [], market_caps: [], total_volumes: []});
-  console.log(data);
 
   return (
     <div>
