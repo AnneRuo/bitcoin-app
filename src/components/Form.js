@@ -2,14 +2,19 @@ import React, { useState } from "react";
 import { Getdata } from "./Getdata";
 
 const Form = ({setData}) => {
-    const [fromDate, setFromDate] = useState("2021-01-01");
-    const [toDate, setToDate] = useState("2021-12-31");
+    const [fromDate, setFromDate] = useState("");
+    const [toDate, setToDate] = useState("");
     
     const handleSubmit = async (event) => {
+        if (fromDate === "" || toDate === "") {
+            alert("Select date range");
+        }
         event.preventDefault();
-        console.log('Date range ' + fromDate + ' - ' + toDate);
         let timestampStart = (new Date(fromDate).getTime())/1000;
         let timestampEnd = (new Date(toDate).getTime() + (1*60*60*1000))/1000;
+        if (timestampStart >= timestampEnd) {
+            alert("Check date range, end date can't be earlier than start date");
+        }
         
         const fetchData = await Getdata(timestampStart, timestampEnd);
         

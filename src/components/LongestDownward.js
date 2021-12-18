@@ -29,7 +29,7 @@ const LongestDownward = ({data}) => {
     
     return (
         <div>
-            <h4>The longest bearish (downward) trend within the given date range:</h4>
+            <h3>The longest bearish (downward) trend within the given date range:</h3>
             <p>Maximum days bitcoin's price was decreasing in a row was {longestPeriod} days.</p>
         </div>
       );

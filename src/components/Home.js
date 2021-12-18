@@ -4,7 +4,7 @@ const Home = () => {
     return (
       <div>
         <h2>Welcome!</h2>
-        <h4>Today is again the best day to make more money!</h4>
+        <h3>Today is again the best day to make more money!</h3>
         <p>
         Bitcoin is one of the first implementations of cryptocurrency. 
         It is an open source cryptocurrency created by a person or 

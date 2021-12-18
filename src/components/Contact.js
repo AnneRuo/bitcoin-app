@@ -19,7 +19,7 @@ const Contact = () => {
           GitHub</a> and get to know me and my skills better on my <a href="https://anneruo.github.io/">
           GitHub page</a>.</p>
 
-        <h4>Let's help Scrooge McDuck together in the future!</h4> 
+        <h3>Let's help Scrooge McDuck together in the future!</h3> 
       </div>
     );
   }

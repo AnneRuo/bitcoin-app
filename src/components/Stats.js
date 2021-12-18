@@ -12,7 +12,7 @@ const Stats = () => {
   return (
     <div>
       <h2>Bitcoin's statistics</h2>
-      <h4>Select date range:</h4>
+      <h3>Select date range:</h3>
 
       <div id="form">
         <Form setData={setData} />

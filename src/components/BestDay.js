@@ -37,7 +37,7 @@ const BestDay = ({data}) => {
 
     return (
         <div>
-            <h4>The best day for buying and selling bitcoin to maximize profits: </h4>
+            <h3>The best day for buying and selling bitcoin to maximize profits: </h3>
             <p>Day to buy: {dayToBuyDate} </p>
             <p>Day to sell: {dayToSellDate} </p>
         </div>

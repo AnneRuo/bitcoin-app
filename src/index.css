@@ -4,7 +4,7 @@ body {
     margin: 0;
   }
 
-  h1, h2, h4, p, ul, li, form {
+  h1, h2, h3, p, ul, li, form {
     font-family: sans-serif;
   }
 
@@ -74,7 +74,6 @@ body {
 
   #submitBtn {
     display: inline-block;
-    width: 15%;
     height: 2rem;
     background-color: #9bc4c7;
     border: 0;
