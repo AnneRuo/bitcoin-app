@@ -3,14 +3,12 @@ import React from "react";
 const LongestDownward = ({data}) => {
 
     let prices = data.prices;
-    console.log(prices);
+    //console.log(prices);
 
     //Definition of a downward trend shall be: “Price of day N is lower than price of day N-1”
     //Expected output: The maximum amount of days bitcoin’s price was decreasing in a row.
 
     let longestPeriod = 0;
-    let periodStartPoint = null;
-    let periodEndPoint = null;
     let counter = 0;
 
     if (prices.length > 1) {
@@ -22,30 +20,13 @@ const LongestDownward = ({data}) => {
                 counter++;
                 if (counter > longestPeriod) {
                     longestPeriod = counter;
-                    periodEndPoint = prices[i][0];
                 }
             } else if (priceCurr >= pricePrev) {
                 counter = 0;
             }
         }
-
-        console.log(periodEndPoint);
-        const periodEndDay = new Date(periodEndPoint).toLocaleString();
-        console.log(periodEndDay);
-
-/*         Data granularity is automatic (cannot be adjusted)
-        1 day from query time = 5 minute interval data
-        1 - 90 days from query time = hourly data
-        above 90 days from query time = daily data (00:00 UTC) */
-
-
-
     }
     
-
-
-
-
     return (
         <div>
             <h4>The longest bearish (downward) trend within the given date range:</h4>

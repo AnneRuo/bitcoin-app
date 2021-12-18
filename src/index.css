@@ -12,6 +12,12 @@ body {
     color: #00587A;
   }
 
+  a {
+    color: #3bb1b9;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
   ul.header li {
     display: inline;
     list-style-type: none;

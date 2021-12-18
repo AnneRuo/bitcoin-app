@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Getdata } from "./Getdata";
 
 const Form = ({setData}) => {
-    const [fromDate, setFromDate] = useState("2020-01-01");
-    const [toDate, setToDate] = useState("2020-12-31");
+    const [fromDate, setFromDate] = useState("2021-01-01");
+    const [toDate, setToDate] = useState("2021-12-31");
     
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -12,7 +12,28 @@ const Form = ({setData}) => {
         let timestampEnd = (new Date(toDate).getTime() + (1*60*60*1000))/1000;
         
         const fetchData = await Getdata(timestampStart, timestampEnd);
+        
+        /* Data granularity is automatic (cannot be adjusted)
+        1 day from query time = 5 minute interval data -> every 12*24=288th value;
+        1 - 90 days from query time = hourly data -> every 24th value
+        above 90 days from query time = daily data (00:00 UTC) */
+
+        const diffInMs = new Date(toDate) - new Date(fromDate);
+        const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+        console.log(diffInDays);
+
+        /* if (diffInDays < 1) {
+            setData();
+        } else if (diffInDays === 1) {
+            
+        } else if (diffInDays <= 90) {
+
+        } else {
+            setData(fetchData);
+        } */
+
         setData(fetchData);
+        
     }    
 
     return (

@@ -4,8 +4,6 @@ const HighestVolume = ({data}) => {
 
     let volumes = data.total_volumes;
     //console.log(volumes);
-    //console.table(volumes);
-    //console.log(volumes[0][1]);
     
     let highestVol = volumes.reduce(function (a, b) {
         return Math.max(a, b[1]);
@@ -18,8 +16,7 @@ const HighestVolume = ({data}) => {
         }
     });
     
-    //Timestamp to date: new Date(1636701329000).toLocaleString();
-    const highestDay = new Date(highestVolTimestamp).toLocaleString();
+    const highestDay = new Date(highestVolTimestamp).toDateString();
     
     return (
         <div>
