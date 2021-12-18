@@ -2,14 +2,24 @@ body {
     background-color: #E7E7DE;
     padding: 20px;
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
   }
 
-  h1, h2, h3, p, ul, li, form {
-    font-family: sans-serif;
+  h1, h2, h3, ul, li, form, #submitBtn {
+    font-family: 'Montserrat', sans-serif;
   }
 
   h1 {
-    color: #00587A;
+    color: #004561;
+    font-size: 40px;
+    font-family: 'Rubik', sans-serif;
+    float: right;
+    padding-left: 3px;
+  }
+
+  .title-section {
+    display: inline-block;
   }
 
   a {
@@ -30,7 +40,7 @@ body {
   }
 
   ul.header li a {
-    color: #00587A;
+    color: #004561;
     font-weight: bold;
     text-decoration: none;
     padding: 20px;
@@ -58,7 +68,7 @@ body {
   .form-box label {
     display: inline-block;
     text-align: left;
-    font-size: 16px;
+    font-size: 18px;
     margin: 0 0 2vh 0;
   }
 
@@ -74,12 +84,16 @@ body {
 
   #submitBtn {
     display: inline-block;
-    height: 2rem;
+    height: 2.5rem;
     background-color: #9bc4c7;
     border: 0;
-    bottom: 0;
+    padding-left: 15px;
+    padding-right: 15px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
+    color: #004561;
+    font-weight: bold;
+    border-radius: 7px;
   }
 
   #submitBtn:hover {

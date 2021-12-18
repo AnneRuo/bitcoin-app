@@ -8,13 +8,17 @@ import {
   import Home from "./components/Home";
   import Stats from "./components/Stats";
   import Contact from "./components/Contact";
+  import icon from "./bitcoin-icon.png";
   
 
 const App = () => {
     return (
         <Router>
             <div>
-                <h1>Bitcoin App</h1>
+                <div className="title-section">
+                    <img src={icon} width="90" alt="Bitcoin Icon" />
+                    <h1>itcoin App</h1>
+                </div>
                 <ul className="header">
                     <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="/stats">Statistics</NavLink></li>
