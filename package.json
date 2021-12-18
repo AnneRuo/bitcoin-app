@@ -1,6 +1,6 @@
 {
   "name": "bitcoin-app",
-  "homepage": "https://anneruo.github.io/bitcoin-app",
+  "homepage": "https://anneruo.github.io/bitcoin-app/home",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
