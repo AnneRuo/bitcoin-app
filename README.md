@@ -14,7 +14,7 @@ Otherwise the application is ready and easily extensible when new features are t
 
 ## Live Application URL
 
-**https://anneruo.github.io/bitcoin-app**
+**https://anneruo-bitcoin-app.herokuapp.com/**
 
 This URL has the application deployed in.
 
