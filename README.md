@@ -2,7 +2,7 @@
 
 ### Bitcoin App
 
-A React application to analyze bitcoin's market value for a date range given by the user. Application uses CoinGecko’s public API.
+React application to analyze bitcoin's market value for a date range given by the user. Application uses CoinGecko’s public API.
 
 ## Project Status
 
